@@ -1,5 +1,5 @@
  Electricity Estimator & Report Generator 
-This program is a simple Python program designed to perform basic statistical analysis and data used on a set of electricity usage values. It show operations using lists, strings, arrays, and nested dictionaries.
+This program is a simple Python program  to perform basic statistical analysis and data used on a set of electricity usage values. It show operations using lists, strings, arrays, and nested dictionaries.
 
 Features 
 Statistical Analysis: Calculates the total, average, minimum, and maximum power usage from a list of values.
