@@ -1,0 +1,61 @@
+import array
+# integer step on electricity estimator
+pawer=[10,40,20,50,60]
+total=sum(pawer)
+average=sum(pawer)/len(pawer)
+minimum=min(pawer)
+maximum=max(pawer)
+print("OUTPUT ON INTEGER")
+print("total of pawer used=",total) 
+print("average of pawer used=",average)
+print("minimum pawer used=",minimum)
+print("maximum power used=",maximum)
+# string step on elrctricity used report
+report=f"""report based on power used
+Total:{total}
+Average:{average}
+"""
+print("\nOUTPUT ON STRING AND COMPARISON")
+print(report)
+#standard condition of power
+standard=30
+level="power used is above standard" if average>standard  else "power used is below standard"
+print("Average  ",level)
+#list operation by using list initialised on top of our project
+print("OUTPUT ON LIST")
+print("list before adding and deleting",pawer)
+pawer.append(100) #add new element
+for item in pawer:
+  if item <15:
+    pawer.remove(item) #remove element less than 15
+pawer.sort()
+print("pawer used after adding,removing and sorting",pawer)
+#operetion on array
+print("OUTPUT ON ARRAY AND COMPARISON")
+arr=[25]*5
+print(" fixed pawer used in array form",arr)
+print("sum of pawer used electricity=",sum(arr))
+#comparison between array and list total
+if sum(pawer)>sum(arr):
+  print("sum of list pawer is larger than array power")
+else:
+  print("sum of array pawer is larger than sum of list power")
+
+  #operation on dictionaries
+print("\nOUTPUT ON DICTIONARIES")
+pawerunits ={"unit1":{"id":11, "name":"home", "value":20},
+             "unit2":{"id":22, "name":"industry", "value":50},
+             "unit3":{"id":33, "name":"government", "value":60}}
+print("power used in dictionary form before any operation",pawerunits)
+ 
+ #updating and deleting in dectionaries
+del pawerunits["unit1"] 
+print("power used in dictionary after deleting  of home",pawerunits)
+pawerunits["unit2"]["id"]=55
+pawerunits["unit2"]["name"]="private_sector"
+pawerunits["unit2"]["value"]=200
+print("power used in dectionaries after updating unit2",pawerunits)
+totalpawer=0
+for person_id, person_data in pawerunits.items():
+  totalpawer+=person_data["value"]
+print("sum of power or value in nested dictionary=",totalpawer)
